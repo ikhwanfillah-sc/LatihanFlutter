@@ -1,0 +1,54 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.purple,
+          title: Text(
+            "Belajar Row and Column",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.lightBlue,
+            ),
+          ),
+        ),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+              Text("Text a"),
+              Text("Text b"),
+              Text("Text c"),
+            Column(children: <Widget>[
+              Text("Text 1"),
+              Text("Text 2"),
+              Text("Text 3"),
+            ]),
+            Column(children: <Widget>[
+              Text("Text 4"),
+              Text("Text 5"),
+              Text("Text 6"),
+            ]),
+            Column(children: <Widget>[
+              Text("Text 7"),
+              Text("Text 8"),
+              Text("Text 9"),
+            ]),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ada penambahan dan perubahan pada pembelaharan row and column
