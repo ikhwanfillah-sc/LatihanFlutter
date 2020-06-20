@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,27 +12,44 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Aplikasi Hello World"),
+          backgroundColor: CupertinoColors.black,
+          title: Center(
+              child: Text(
+            "Bagian Appbar",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white70,
+              fontWeight: FontWeight.w900,
+            ),
+          )),
         ),
         body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
             child: Container(
-                color: Colors.lightBlue,
-                height: 100,
-                width: 150,
+              color: Colors.deepOrangeAccent,
+              width: 300,
+              height: 300,
+              child: Center(
                 child: Text(
-                  "saya sedang melatih kemampuan flutter saya.",
+                  "Text dalam kotak orange yang menarik untuk belajar widget text dalam flutter",
                   textAlign: TextAlign.center,
-                  softWrap: true,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: Colors.white,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20,
+                   fontSize: 20,
+                   fontWeight: FontWeight.w700,
+                   color: Colors.blueGrey,
                   ),
-                ))),
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
 }
+
+
+// ada penambahan pada latihan widget text
